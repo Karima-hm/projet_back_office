@@ -37,3 +37,7 @@ class InfoProductDetail(APIView):
         product = self.get_object(tig_id=tig_id)
         serializer = InfoProductSerializer(product)
         return Response(serializer.data)
+from django.shortcuts import render
+
+def login_view(request):
+    return render(request, 'login.html')
